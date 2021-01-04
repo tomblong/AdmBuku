@@ -37,7 +37,7 @@
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Klik Disini"></div>
             </div>
             <!--logo start-->
-            <a href="@Url.Action("Index", "Home")" class="logo"><b>HAW19<span>Rental</span></b></a>
+            <a href="@Url.Action("Index", "Home")" class="logo"><b>Administrasi <span>Buku</span></b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -60,47 +60,10 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
                     <p class="centered"><a href="profile.html"><img src="~/lib/Content/img/resep.jpg" class="img-circle" width="80"></a></p>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-desktop"></i>
-                            <span>Menu</span>
-                        </a>
-                        <ul class="sub">
-                            @if (User.IsInRole("Admin"))
-                            {
-                                <li><a asp-area="" asp-controller="Role" asp-action="Index">Role</a></li>
-
-                                <li><a asp-area="" asp-controller="Customer" asp-action="Index">Customer</a></li>
-                                <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
-                                <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>
-                                <li><a asp-area="" asp-controller="Kendaraan" asp-action="Index">Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="JenisKendaraan" asp-action="Index">Jenis Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="KondisiKendaraan" asp-action="Index">Kondisi Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="Jaminan" asp-action="Index">Jaminan</a></li>
-                                <li><a asp-area="" asp-controller="Gender" asp-action="Index">Gender</a></li>
-
-                            }
-                            else if (User.IsInRole("Manager"))
-                            {
-                                <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
-                                <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>
-                            }
-                            else if (User.IsInRole("Kasir"))
-                            {
-                                <li><a asp-area="" asp-controller="Customer" asp-action="Index">Customer</a></li>
-                                <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
-                                <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>
-                                <li><a asp-area="" asp-controller="Kendaraan" asp-action="Index">Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="JenisKendaraan" asp-action="Index">Jenis Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="KondisiKendaraan" asp-action="Index">Kondisi Kendaraan</a></li>
-                                <li><a asp-area="" asp-controller="Jaminan" asp-action="Index">Jaminan</a></li>
-                            }
-                        </ul>
-                    </li>
                     <li class="mt">
-                        <a href="@Url.Action("Index", "Home")">
-                            <i class="fa fa-dashboard"></i>
-                            <span>Home</span>
+                        <a href="@Url.Action("Index", "Bukus")">
+                            <i class="fa fa-cogs"></i>
+                            <span>Kelola Buku</span>
                         </a>
                     </li>
                     <li class="sub-menu">
